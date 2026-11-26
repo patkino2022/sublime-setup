@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon
+  id="pvr.sublime"
+  version="22.1.5"
+  name="Sublime TV"
+  provider-name="patkino (pvr.tvlink by Alex@ELEC)">
+  <requires>
+<import addon="kodi.binary.global.main" minversion="2.0.3" version="2.0.3"/>
+<import addon="kodi.binary.global.general" minversion="1.0.4" version="1.0.5"/>
+<import addon="kodi.binary.global.filesystem" minversion="1.1.11" version="1.1.11"/>
+<import addon="kodi.binary.global.tools" minversion="1.0.0" version="1.0.4"/>
+<import addon="kodi.binary.instance.pvr" minversion="9.2.0" version="9.2.0"/>
+  </requires>
+  <extension
+    point="kodi.pvrclient"
+    library_android="libpvr.sublime.so"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>android-aarch64</platform>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/patkino2022/pvr.sublime</source>
+    <summary lang="en_GB">TV client for service.tvlink</summary>
+    <summary lang="ru_RU">ТВ-клиент для service.tvlink</summary>
+    <description lang="en_GB">Live TV, archive and guide from the service.tvlink add-on. Based on pvr.tvlink by Alex@ELEC; does not depend on the AlexELEC image.</description>
+    <description lang="ru_RU">Прямой эфир, архив и телегид из дополнения service.tvlink. Основан на pvr.tvlink от Alex@ELEC и не зависит от образа AlexELEC.</description>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+    <news>
+v22.1.5
+- Builds for Windows x86_64, Android aarch64/armv7 and macOS (x86_64 + arm64)
+v22.1.4
+- Settings: fields service.tvlink always overwrites are hidden (still defined)
+v22.1.3
+- DASH channels (#KODIPROP:inputstream=inputstream.adaptive from service.tvlink) play through inputstream.adaptive
+v22.1.2
+- Live stream read without Kodi's stream buffer: channel switch no longer waits for the next segment
+v22.1.1
+- Instance created by the add-on class: survives Kodi creating the client twice (was "Not implemented")
+v22.1.0
+- pvr.sublime: own id, built outside the AlexELEC image
+- Startup: retry the playlist until the server answers (was: wait for the next refresh hour)
+v22.0.6
+- Epg: add parsed EPG-cache binary file
+v22.0.5
+- Epg: optimize download xmltv-file based on TVLINK xmltv.status
+v22.0.4
+- Del: option Use FFmpeg playlist
+v22.0.3
+- Set: one option Use Inputstream FFmpeg Direct
+v22.0.2
+- Add: always play EPG Tags as live-stream
+v22.0.1
+- Fix: Timeshift/Catchup
+v22.0.0
+- Init: first version for Kodi-22 (Piers)
+    </news>
+  </extension>
+</addon>
+</addons>

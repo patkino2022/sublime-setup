@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.RuTor"
+       name="RuTor"
+       version="4.7.8"
+       provider-name="TDW">
+  <requires>
+    <import addon="plugin.video.elementum"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="server.py" start="[login|startup]"/>
+  <extension point="xbmc.addon.metadata">
+    <summary>RuTor</summary>
+    <description>RuTor - популярный торрент трекер. Forum: http://kodi.moy.su</description>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.elementum" name="Elementum" version="0.1.119.9009.12" provider-name="elgatito">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="repository.elementumorg" optional="true" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.requests" version="2.9.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="ru">Elementum: Стриминг видео</summary>
+        <summary lang="en">Elementum: Media streaming</summary>
+        <summary lang="hr">Elementum: Medijsko strujanje</summary>
+        <summary lang="es">Elementum: Transmisión de medios</summary>
+        <summary lang="sv">Elementum: medieströmning</summary>
+        <description lang="ru">Elementum это дополнение для поиска и воспроизведения торрентов. Дополнение не ходит на запрещенные сайты самостоятельно. Хотя, для поиска используются дополнения (называемые провайдерами), которые устанавливаются отдельно.[CR]Этот проект является ответвлением хорошо извесных, но не поддерживаемых Pulsar/Quasar от steeve и scakemyer.</description>
+        <description lang="en">Elementum is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar/Quasar projects from steeve and scakemyer.</description>
+        <description lang="hr">Elementum je pogon pretraživanja i strujanja. Ne posjećuje torrent web stranice iz pravnih razloga. Ipak, koristi posebno napravljene dodatke (nazvane pružatelji usluge) koji su instalirani odvojeno.[CR]Ovaj projekt je ogranak dobro poznatih, ali više ne održavanih Pulsar/Quasar projekata od autora steevea i scakemyera.</description>
+        <description lang="es">Elementum es un motor de búsqueda y transmisión torrent. No navega por sitios web torrent por razones legales. Sin embargo, llama a complementos especialmente diseñados para ello (denominados providers o proveedores) que se instalan por separado.[CR]Este proyecto es un fork de los bien conocidos, pero ya sin soporte proyectos Pulsar/Quasar de steeve y scakemyer.[CR]</description>
+        <description lang="sv">Elementum är en torrentsöknings- och strömningsmotor. Det går inte till torrentwebbplatser av juridiska skäl. Den anropar dock speciellt utformade tillägg (kallade leverantörer) som installeras separat.[CR]Detta projekt är en förgrening av de välkända, men inte längre underhållna Pulsar/Quasar-projekten av steeve och scakemyer. </description>
+        <disclaimer lang="ru">Автор дополнения не несёт ответственности за скачивание или поиск информации и содержимого в этом дополнении. Автор никак не связан с Kodi, командой Kodi, или XBMC Foundation.</disclaimer>
+        <disclaimer lang="en">The author does not own or host any content found within this Addon. The author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+        <disclaimer lang="hr">Autor ovog dodatka ne posjeduje i ne distribuira bilo kakav sadržaj koji je pronađen. Autor nije povezan sa ili na bilo koji drugi način bilo sa Kodijem, Team Kodijem ili XBMC fundacijom.</disclaimer>
+        <disclaimer lang="es">El autor no posee ni aloja ningún contenido que se encuentre a través de este complemento. El autor no está unido ni relacionado de ninguna manera con Kodi, Team Kodi, o XBMC Foundation.</disclaimer>
+        <disclaimer lang="sv">Skaparen äger inte eller är värd av något innehåll som finns i detta tillägg. Författaren är inte ansluten till eller på något annat sätt en del av Kodi, Team Kodi eller XBMC Foundation.</disclaimer>
+        <language>en el es de fi fr he hr it nl pt ro sk sv</language>
+        <platform>all</platform>
+        <website>http://elementum.surge.sh/</website>
+        <source>https://github.com/elgatito/plugin.video.elementum</source>
+        <forum></forum>
+        <license>Non commercial. See https://github.com/elgatito/plugin.video.elementum/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.png</screenshot>
+            <screenshot>resources/screenshots/movies.png</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.filmix" version="2.2.61.74.0" name="Filmix" provider-name="patkino">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.simpleplugin3" version="3.0.1"/>
+        <import addon="script.module.requests" version="2.25.1"/>
+        <import addon="script.module.future" version="0.18.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">based on plugin by vlmaksime</summary>
+        <summary lang="ru">based on plugin by vlmaksime</summary>
+        <description lang="en">based on plugin by vlmaksime[CR]Key features:[CR]- Kodi 22 / CoreELEC compatibility cleanup[CR]- Embedded SimpleMedia, no external script.module.simplemedia dependency[CR]- Source-only metadata mode for Sublime/skin broker: Filmix avoids TMDb/detail/art/rating/trailer enrichment by default[CR]- Native Kodi resume prompt with deferred verified seek after the real stream starts[CR]- Strict per-episode resume matching, so one episode resume point is not reused by other episodes[CR]- Watched state and playback progress kept in Kodi and shared between boxes[CR]- Disk catalog cache, Countries sections, active widget registry, source-only widget snapshots, live episode topology refresh and skin-broker friendly ids</description>
+        <description lang="ru">based on plugin by vlmaksime[CR]Key features:[CR]- Kodi 22 / CoreELEC compatibility cleanup[CR]- Embedded SimpleMedia, no external script.module.simplemedia dependency[CR]- Source-only metadata mode for Sublime/skin broker: Filmix avoids TMDb/detail/art/rating/trailer enrichment by default[CR]- Native Kodi resume prompt with deferred verified seek after the real stream starts[CR]- Strict per-episode resume matching, so one episode resume point is not reused by other episodes[CR]- Watched state and playback progress kept in Kodi and shared between boxes[CR]- Disk catalog cache, Countries sections, active widget registry, source-only widget snapshots, live episode topology refresh and skin-broker friendly ids</description>
+        <language>ru</language>
+        <platform>all</platform>
+        <license>GPL-3.0-only</license>
+        <forum>http://xbmc.ru/forum/showthread.php?t=16408</forum>
+        <website>https://filmix.ac/</website>
+        <email>vl.maksime@gmail.com</email>
+        <news>Аккаунт PRO - качество до 1080p.</news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <clearlogo>resources/media/clearlogo.png</clearlogo>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.hdrezka.tv" name="Hdrezka.tv" version="3.3.4.9056.0" provider-name="MrStealth, dandy, DesSolo, DayAnger, patkino">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+        <import addon="script.module.inputstreamhelper" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
+        <provides>video</provides>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary>Hdrezka.tv</summary>
+        <description>HDREZKA.TV - Фильмы, мультфильмы и сериалы в высоком качестве</description>
+        <description>For personal use only</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.youtube" name="YouTube" version="100.8.0.0~beta1.5" provider-name="anxdpanic">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+        <import addon="inputstream.adaptive" version="21.0.0"/>
+        <import addon="script.module.pyqrcode" version="1.2.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.python.script" library="tv.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Browse and watch YouTube with the TV layout</summary>
+        <description lang="en_GB">Browse YouTube the way the TV app shows it: the TV sidebar, shelves, subscriptions, library and search, with full video information and DASH/HLS playback through InputStream Adaptive. Sign in with a TV code, customise the main menu, hide Shorts or watched videos, and set preferred quality, codec and subtitle languages.</description>
+        <platform>all</platform>
+        <license>GPL-3.0-only</license>
+        <website>https://github.com/anxdpanic/plugin.video.youtube</website>
+        <source>https://github.com/anxdpanic/plugin.video.youtube</source>
+        <news>v8.0.0~beta1
+- New add-on built around YouTube's TV layout: the TV sidebar, shelves, subscriptions, library and search
+- Sign in with a TV code, with multiple accounts
+- DASH/HLS playback through InputStream Adaptive
+- Plugin paths from earlier versions keep working</news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+            <screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+            <screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+            <screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
+            <screenshot>resources/screenshots/screenshot-05.jpg</screenshot>
+        </assets>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+    </extension>
+</addon>
+
+<!-- Пакет сетапа: все дополнения - его зависимости. Мастер script.sublime.setup ставит один этот
+     пакет, Kodi подтягивает остальное сам за один раз, без вопроса по каждому (владелец, 23.11.2026).
+     ТВ-клиент pvr.sublime - из каталога своей платформы, его подключает мастер. -->
+<addon id="script.module.sublime" name="Sublime" version="1.0.1" provider-name="patkino">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="skin.sublime"/>
+    <import addon="service.tvlink"/>
+    <import addon="pvr.sublime"/>
+    <import addon="plugin.video.filmix"/>
+    <import addon="plugin.video.hdrezka.tv"/>
+    <import addon="plugin.video.elementum"/>
+    <import addon="plugin.video.RuTor"/>
+    <import addon="plugin.video.youtube"/>
+    <import addon="plugin.program.autocompletion"/>
+  </requires>
+  <!-- скрипт, а не модуль: InstallAddon модули-библиотеки не ставит (Windows, 23.11.2026);
+       без <provides> его нет ни в одном разделе -->
+  <extension point="xbmc.python.script" library="default.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Sublime setup: all add-ons</summary>
+    <summary lang="ru_RU">Сетап Sublime: все дополнения</summary>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+  </extension>
+</addon>
+
+<addon id="script.sublime.setup" name="Sublime Setup" version="1.0.17" provider-name="patkino">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <!-- сразу после установки из zip мастер запускается сам -->
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Installs the Sublime Kodi setup</summary>
+    <summary lang="ru_RU">Ставит сетап Kodi «Sublime»</summary>
+    <description lang="en_GB">Skin, movies and series, torrents, free TV with guide and video hosting - on Windows, Android, macOS, Linux, CoreELEC and LibreELEC. On CoreELEC/LibreELEC it also tunes the system; elsewhere only Kodi itself is set up.</description>
+    <description lang="ru_RU">Скин, фильмы и сериалы, торренты, бесплатное ТВ с телегидом и видеохостинг - на Windows, Android, macOS, Linux, CoreELEC и LibreELEC. На CoreELEC/LibreELEC настраивает и систему, на остальных платформах - только сам Kodi.</description>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/patkino2022/sublime-setup</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.tvlink" name="TVLink" version="1.0.58" provider-name="patkino">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1"/>
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="startup"/>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="ru_RU">IPTV из плейлистов для pvr.tvlink</summary>
+    <summary lang="en_GB">IPTV from playlists for pvr.tvlink</summary>
+    <description lang="ru_RU">Задайте плейлисты и телегид - дополнение соберёт из них один список каналов, отдаст его pvr.tvlink и будет держать трансляцию: если источник замолчал, канал переключается на следующий плейлист. Порядок групп и каналов меняется на экране «Каналы».</description>
+    <description lang="en_GB">Give it playlists and guides: it merges them into one channel list for pvr.tvlink and keeps streams alive by falling over to the next playlist. Groups and channels are ordered on the Channels screen.</description>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+  </extension>
+</addon>
+
+<addon id="skin.sublime" name="sublime" provider-name="patkino" version="3.2.9.612.0">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+        <import addon="xbmc.gui" version="5.17.0" />
+        <import addon="script.module.pil" version="1.1.7" />
+        <import addon="resource.images.studios.coloured" version="0.0.24" />
+        <import addon="resource.images.moviecountryicons.maps" optional="true" />
+    </requires>
+    <extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="1080i" width="1920" height="1080" />
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/vcl_service.py" start="startup" />
+    <extension point="xbmc.python.script" library="resources/lib/vcl_variables_script.py" />
+    <extension point="xbmc.python.pluginsource" library="resources/lib/vcl_variables_plugin.py">
+        <provides>video</provides>
+    </extension>
+<extension point="xbmc.addon.metadata">
+        <summary lang="en">sublime</summary>
+        <summary lang="es">sublime</summary>
+        <summary lang="de">sublime</summary>
+        <summary lang="zh">sublime</summary>
+        <summary lang="ar">sublime</summary>
+        <summary lang="ru">sublime</summary>
+        <description lang="en">sublime is a clean, no-sidemenu Kodi skin with vertical combined hubs, popup search, refined OSD screens, PVR support, a lightweight dark glass interface, and an embedded online metadata service.[CR]Based on skins by jurialmunkey.</description>
+        <description lang="ru">sublime — чистый Kodi-скин без sidemenu, с вертикальными combined-хабами, popup-поиском, доработанными OSD-экранами, PVR, лёгким dark-glass интерфейсом и встроенным сервисом онлайн-метаданных.[CR]Основано на скинах jurialmunkey.</description>
+        <description lang="es">sublime</description>
+        <description lang="de">sublime</description>
+        <description lang="zh">sublime</description>
+        <description lang="ar">sublime</description>
+        <platform>all</platform>
+        <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
+        <forum />
+        <source />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
